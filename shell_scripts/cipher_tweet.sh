@@ -40,7 +40,7 @@ Z="$(expr $Y + $A)"
 # Loop over each word in the message separated by whitespace.
 for word in $message
 do
-  # Get the numeric position of the word in the dictionary. TO-DO: should add this as a preliminary for loop to get sizes before the encrypt step
+  # Get the numeric position of the word in the dictionary. TODO: should add this as a preliminary for loop to get sizes before the encrypt step
   NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
   
   # If the word doesn't exist in the dictionary, append it and sort the dictionary again.
