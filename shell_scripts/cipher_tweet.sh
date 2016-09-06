@@ -2,7 +2,7 @@
 
 # A cipher that reads a user message, encrypts it, and tweets the encrypted message.
 
-DICTIONARY=/Users/adrianthompson/Documents/dictionary.txt
+DICTIONARY=/Users/adrianthompson/projects/git/coding_projects/libraries/dictionary.txt
 
 echo "Enter your message."
 read message
