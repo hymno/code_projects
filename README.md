@@ -1,4 +1,4 @@
-# Projects
+# code_projects
 ##Programming, research, and other miscellaneous projects of mine
 
 - ucsc_physics: Some of the code I used for my senior thesis on WW boson scattering.
