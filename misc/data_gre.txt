@@ -1,0 +1,147 @@
+Name	Mean	Accepted	Rejected	Size
+University of Idaho	550	1	0	1
+Northern Arizona University	570	1	0	1
+Florida Tech	580	1	1	2
+Georgia State	585	2	1	3
+Texas Tech	585	2	0	2
+Utah State	590	3	0	3
+University of West Virginia	600	1	0	1
+University of Wyoming	620	1	1	2
+University of California - Merced	626.7	3	0	3
+University of New Hampshire	635	8	3	11
+University of Oklahoma	635	8	1	9
+University of Rhode Island	640	1	0	1
+University of Toledo	640	3	0	3
+University of Utah	645	4	3	7
+Kent State	650	1	0	1
+San Diego State	660	1	0	1
+Drexel	670	6	3	9
+Washington State	670	7	1	8
+University of Delaware	671.4	7	0	7
+City University of New York	680	2	1	3
+University of Iowa	682.2	9	4	13
+University of Hawaii - Manoa	682.3	13	13	26
+University of California - Riverside	683.7	27	9	36
+Virginia Tech	687.5	4	2	6
+University of North Carolina	690.6	16	10	26
+University of Illinois - Chicago	692.5	4	4	8
+New Mexico State	695	4	0	4
+University of Missouri –	696.7	3	1	4
+University of Wisconsin - Milwaukee	698.8	8	4	12
+Baylor	700	1	0	1
+Northeastern	705.7	14	2	16
+University of Western Ontario	706.7	3	0	3
+Oregon State	712.9	7	3	10
+Colorado School of Mines	713.3	3	0	3
+Arizona State	713.6	11	7	18
+LeHigh	714.3	7	1	8
+Colorado State	716.2	13	4	17
+Worcester	720	1	0	1
+Montana State	724.5	11	1	12
+University of Kentucky	725	2	0	2
+Northern Illinois University	726	5	0	5
+University of Tennessee	728.3	6	1	7
+Vanderbilt	735	6	7	13
+University of Massachusetts - Amherst	738.3	24	16	40
+Illinois Institute of Technology	740	1	0	1
+University of South Carolina	740	2	2	4
+Louisiana State	743.3	9	4	13
+University of New Mexico	743.8	16	1	17
+Emory	746.7	3	1	4
+Tufts	748	5	5	10
+Bryn Mawr	750	1	0	1
+Catholic University	750	1	0	1
+Indiana University, Purdue University at Indianapolis	750	1	0	1
+Oklahoma State	750	1	0	1
+North Carolina State	751.2	17	4	21
+University of Minnesota	759.2	38	30	68
+University of Massachusetts - Lowell	760	2	1	3
+University of Oregon	760	16	14	30
+Iowa State	763	10	2	12
+University of Florida	764.2	33	20	53
+Boston College	770	2	0	2
+University of Kansas	770	2	0	2
+Case Western Reserve	770.8	13	5	18
+University of Connecticut	772.5	8	1	9
+Rochester	774.6	46	24	70
+William & Mary	777.6	17	1	18
+Texas A&M	778.2	17	6	23
+Purdue	779.4	17	8	25
+University of California - Irvine	779.4	34	21	55
+Kansas State	780	8	0	8
+Wayne State	780	1	0	1
+Notre Dame	780.8	12	4	16
+University of Arizona	782.3	44	44	88
+University of Alabama	785	2	1	3
+University of Texas - Dallas	785	2	0	2
+University of Virginia	786.5	26	11	37
+Rutgers	786.8	28	25	53
+Durham	790	1	1	2
+SUNY Albany	790	2	0	2
+University of Texas - Houston	790	1	1	2
+University of Victoria	792.5	4	0	4
+Michigan State	792.6	19	11	30
+Boston University	793.3	40	34	74
+Pittsburgh	793.3	21	9	30
+Washington University	794.4	9	5	14
+Indiana University	795.5	20	13	33
+University of California – Santa Cruz	796	35	56	91
+University of California - Davis	796.6	35	30	65
+Imperial	796.7	3	2	5
+McMaster	800	1	0	1
+Rice	800	18	13	31
+University of Wisconsin	802.5	77	53	130
+University of Texas - Austin	805	54	42	96
+Oxford	808.6	7	4	11
+Ohio State	809.8	58	41	99
+McGill	810	16	5	21
+University of British Columbia	811	20	5	25
+SUNY Stonybrook	811.8	51	41	92
+University of Central Florida	815.7	7	1	8
+New York University	817.5	24	30	54
+Johns Hopkins	819.7	34	22	56
+Brandeis	820	6	5	11
+University of Nebraska	820	4	2	6
+University of Michigan	820.4	72	81	153
+Penn State	821.3	60	52	112
+University of California – San Francisco	823.3	3	2	5
+SUNY Buffalo	825.6	9	1	10
+Duke	826.8	25	25	50
+Brown	827	27	33	60
+Northwestern	830	19	24	43
+Georgia Tech	830.8	26	3	29
+University of Toronto	832.3	26	4	30
+University of Pennsylvania	835.2	29	57	86
+Carnegie Mellon	836.8	19	14	33
+Cambridge	838.6	14	4	18
+Dartmouth	840	8	5	13
+University of Mississippi	840	1	1	2
+University of California – Los Angeles	840.1	71	47	118
+Syracuse	841.7	6	6	12
+University of California – San Diego	842.4	70	56	126
+University of Maryland	849.3	113	98	211
+University of Illinois – Urbana/Champaign	849.5	87	71	158
+University of Washington	853.1	65	76	141
+University of Colorado - Boulder	854.2	84	94	178
+Cornell	869.2	117	114	231
+Yale	874.7	66	118	184
+University of Georgia	880	2	1	3
+University of Waterloo	884.4	9	0	9
+University of Southern California	886.4	14	10	24
+University of Chicago	888.5	89	152	241
+Harvard	890.6	67	200	267
+University of California – Santa Barbara	890.6	78	136	214
+Columbia	892.5	53	93	146
+Alberta	900	1	0	1
+Perimeter Institute	905	8	13	21
+Stanford	908.5	81	221	302
+Caltech	909.3	83	154	237
+Berkeley	911.6	108	187	295
+MIT	922.8	71	206	277
+Princeton	929.8	58	186	244
+Calgary	940	1	0	1
+University of Cincinnati	990	1	0	1
+New Mexico Tech	Nil	0	1	1
+Rockefeller	Nil	0	2	2
+University of San Antonio	Nil	0	1	1
+University of Vienna	Nil	0	1	1
