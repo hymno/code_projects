@@ -1,12 +1,27 @@
 #!/bin/bash
-
 # A cipher that reads a user message, encrypts it, and tweets the encrypted message.
-
-DICTIONARY=/Users/adrianthompson/projects/git/coding_projects/libraries/dictionary.txt
 
 echo "Enter your message."
 read message
 echo "Encrypting..."
+
+# Dictionary filepath.
+DICTIONARY=/Users/adrianthompson/projects/git/coding_projects/libraries/dictionary.txt
+
+# Loop over each word in the message separated by whitespace.
+for word in $message
+do
+  # Get the numeric position of the word in the dictionary.
+  $NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
+
+  # If the word doesn't exist in the dictionary, append it and sort the dictionary again.
+  if [ -z $NUM ] ; then
+    echo "$word nonexistent in dictionary. Adding and re-sorting."
+    echo $word >> $DICTIONARY
+    sort $DICTIONARY -f -o $DICTIONARY
+    NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
+  fi
+done
 
 # Assign numeric ranges to each letter.
 SIZE="$(wc -l < "$DICTIONARY")"
@@ -37,21 +52,9 @@ X="$(expr $W + $A)"
 Y="$(expr $X + $A)"
 Z="$(expr $Y + $A)"
 
-# Loop over each word in the message separated by whitespace.
+# Assign crypt words and relative range positions to each word in the message.
 for word in $message
 do
-  # Get the numeric position of the word in the dictionary. TODO: should add this as a preliminary for loop to get sizes before the encrypt step
-  NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
-  
-  # If the word doesn't exist in the dictionary, append it and sort the dictionary again.
-  if [ -z $NUM ] ; then
-    echo "$word nonexistent in dictionary. Adding and re-sorting."
-    echo $word >> $DICTIONARY
-    sort $DICTIONARY -f -o $DICTIONARY
-    NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
-  fi
-
-  # Assign crypt words and relative range positions to each word in the message.
   #A
   if (( $NUM < $A )) ; then
     CRYPT="acrid"
