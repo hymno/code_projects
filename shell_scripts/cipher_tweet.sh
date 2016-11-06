@@ -1,25 +1,27 @@
 #!/bin/bash
 # A cipher that reads a user message, encrypts it, and tweets the encrypted message.
+# Requires the twitter API program 't' connected to an existing twitter account.
+# Download: https://github.com/sferik/t
 
 echo "Enter your message."
 read message
 echo "Encrypting..."
 
 # Dictionary filepath.
-DICTIONARY=/Users/adrianthompson/projects/git/coding_projects/libraries/dictionary.txt
+DICTIONARY=/Users/adrianthompson/depot/git/code_projects/libraries/dictionary.txt
 
 # Loop over each word in the message separated by whitespace.
 for word in $message
 do
-  # Get the numeric position of the word in the dictionary.
-  $NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
-
   # If the word doesn't exist in the dictionary, append it and sort the dictionary again.
+  # -w: whole words -n: line number -m 1: first occurance
+  # -Eo only matching regex,  ^[^:]+ only matches things in the line without the colon
+  NUM="$(grep -wnm 1 $word $DICTIONARY | grep -Eo '^[^:]+')"
   if [ -z $NUM ] ; then
     echo "$word nonexistent in dictionary. Adding and re-sorting."
     echo $word >> $DICTIONARY
-    sort $DICTIONARY -f -o $DICTIONARY
-    NUM="$(grep -wn $word $DICTIONARY | grep -Eo '^[^:]+')"
+    #-f to ignore case, -u print only unique lines, -o outputs to file instead of stdo
+    sort -fu $DICTIONARY -o $DICTIONARY
   fi
 done
 
@@ -55,134 +57,137 @@ Z="$(expr $Y + $A)"
 # Assign crypt words and relative range positions to each word in the message.
 for word in $message
 do
+  # Get the numeric position of the word in the dictionary.
+  NUM="$(grep -wnm 1 $word $DICTIONARY | grep -Eo '^[^:]+')"
+
   #A
   if (( $NUM < $A )) ; then
-    CRYPT="acrid"
+    CRYPT="Albert"
     RELNUM="$(expr $A - $NUM)"
   fi
   #B
   if ( (( $NUM >= $A )) && (( $NUM < $B )) ) ; then
-    CRYPT="boa"
+    CRYPT="Blaise"
     RELNUM="$(expr $B - $NUM)"
   fi
   #C
   if ( (( $NUM >= $B )) && (( $NUM < $C )) ) ; then
-    CRYPT="conflagrate"
+    CRYPT="Christian"
     RELNUM="$(expr $C - $NUM)"
   fi
   #D
   if ( (( $NUM >= $C )) && (( $NUM < $D )) ) ; then
-    CRYPT="dagger"
+    CRYPT="Daniel"
     RELNUM="$(expr $D - $NUM)"
   fi
   #E
   if ( (( $NUM >= $D )) && (( $NUM < $E )) ) ; then
-    CRYPT="ephemeral"
+    CRYPT="Erwin"
     RELNUM="$(expr $E - $NUM)"
   fi
   #F
   if ( (( $NUM >= $E )) && (( $NUM < $F )) ) ; then
-    CRYPT="fear"
+    CRYPT="Felix"
     RELNUM="$(expr $F - $NUM)"
   fi
   #G
   if ( (( $NUM >= $F )) && (( $NUM < $G )) ) ; then
-    CRYPT="gore"
+    CRYPT="Galileo"
     RELNUM="$(expr $G - $NUM)"
   fi
   #H
   if ( (( $NUM >= $G )) && (( $NUM < $H )) ) ; then
-    CRYPT="halberd"
+    CRYPT="Hideki"
     RELNUM="$(expr $H - $NUM)"
   fi
   #I
   if ( (( $NUM >= $H )) && (( $NUM < $I )) ) ; then
-    CRYPT="insidious"
+    CRYPT="Isaac"
     RELNUM="$(expr $I - $NUM)"
   fi
   #J
   if ( (( $NUM >= $I )) && (( $NUM < $J )) ) ; then
-    CRYPT="Joule"
+    CRYPT="Jagadish"
     RELNUM="$(expr $J - $NUM)"
   fi
   #K
   if ( (( $NUM >= $J )) && (( $NUM < $K )) ) ; then
-    CRYPT="Kutta"
+    CRYPT="Karl"
     RELNUM="$(expr $K - $NUM)"
   fi
   #L
   if ( (( $NUM >= $K )) && (( $NUM < $L )) ) ; then
-    CRYPT="Love"
+    CRYPT="Ludwig"
     RELNUM="$(expr $L - $NUM)"
   fi
   #M
   if ( (( $NUM >= $L )) && (( $NUM < $M )) ) ; then
-    CRYPT="Manticore"
+    CRYPT="Mileva"
     RELNUM="$(expr $M - $NUM)"
   fi
   #N
   if ( (( $NUM >= $M )) && (( $NUM < $N )) ) ; then
-    CRYPT="nojja"
+    CRYPT="Nevill"
     RELNUM="$(expr $N - $NUM)"
   fi
   #O
   if ( (( $NUM >= $N )) && (( $NUM < $O )) ) ; then
-    CRYPT="Oort"
+    CRYPT="Otto"
     RELNUM="$(expr $O - $NUM)"
   fi
   #P
   if ( (( $NUM >= $O )) && (( $NUM < $P )) ) ; then
-    CRYPT="pious"
+    CRYPT="Pieter"
     RELNUM="$(expr $P - $NUM)"
   fi
   #Q
   if ( (( $NUM >= $P )) && (( $NUM < $Q )) ) ; then
-    CRYPT="quality"
+    CRYPT="Qadeer"
     RELNUM="$(expr $Q - $NUM)"
   fi
   #R
   if ( (( $NUM >= $Q )) && (( $NUM < $R )) ) ; then
-    CRYPT="relax"
+    CRYPT="Robert"
     RELNUM="$(expr $R - $NUM)"
   fi
   #S
   if ( (( $NUM >= $R )) && (( $NUM < $S )) ) ; then
-    CRYPT="Sulfur"
+    CRYPT="Sally"
     RELNUM="$(expr $S - $NUM)"
   fi
   #T
   if ( (( $NUM >= $S )) && (( $NUM < $T )) ) ; then
-    CRYPT="turgor"
+    CRYPT="Tasneem"
     RELNUM="$(expr $T - $NUM)"
   fi
   #U
   if ( (( $NUM >= $T )) && (( $NUM < $U )) ) ; then
-    CRYPT="umbral"
+    CRYPT="Ulrich"
     RELNUM="$(expr $U - $NUM)"
   fi
   #V
   if ( (( $NUM >= $U )) && (( $NUM < $V )) ) ; then
-    CRYPT="Vola"
+    CRYPT="Val"
     RELNUM="$(expr $V - $NUM)"
   fi
   #W
   if ( (( $NUM > $V )) && (( $NUM < $W )) ) ; then
-    CRYPT="Waals"
+    CRYPT="Werner"
     RELNUM="$(expr $W - $NUM)"
   fi
   #X
   if ( (( $NUM >= $W )) && (( $NUM < $X )) ) ; then
-    CRYPT="xenophobe"
+    CRYPT="Subrahmanyan"
     RELNUM="$(expr $X - $NUM)"
   fi
   #Y
   if ( (( $NUM >= $X )) && (( $NUM < $Y )) ) ; then
-    CRYPT="Yxonomei"
+    CRYPT="Yoichiro"
     RELNUM="$(expr $Y - $NUM)"
   fi
   #Z
   if ( (( $NUM >= $Y )) && (( $NUM < $Z )) ) ; then
-    CRYPT="ziggurat"
+    CRYPT="Zhores"
     RELNUM="$(expr $Z - $NUM)"
   fi
 
