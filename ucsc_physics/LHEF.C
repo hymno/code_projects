@@ -28,50 +28,48 @@
 #include <iostream>
 #include <TParticle.h>
 
-void LHEF::Begin(TTree * /*tree*/)
-{
-	TString option = GetOption();
-
+void LHEF::Begin(TTree * /*tree*/) {
+  TString option = GetOption();
 }
 
-void LHEF::SlaveBegin(TTree * /*tree*/)
-{
-	//makes the histogram. wwMass should be declared in the header file LHEF.h.
-	TString option = GetOption();
-	wwMass = new TH1F("WW Mass","Mass of SM  WW Pair [GeV]", 100, 200., 1000.);
-	wwMass->SetLineColor(1);
+void LHEF::SlaveBegin(TTree * /*tree*/) {
+  // Makes a new TH1F hitogram object.
+  TString option = GetOption();
+  wwMass = new TH1F("WW Mass","Mass of SM  WW Pair [GeV]", 100, 200., 1000.);
+  wwMass->SetLineColor(1);
 }
 
-Bool_t LHEF::Process(Long64_t entry)
-{
-	GetEntry(entry);
-	TLorentzVector WW;
-	Int_t wp = 0;
-	Int_t wm = 0;
+Bool_t LHEF::Process(Long64_t entry) {
+  GetEntry(entry);
+  TLorentzVector WW;
+  Int_t wp = 0;
+  Int_t wm = 0;
 
-	//loops over each event and stores the particle ID for the last W+
-	//and last W- in the event.
-		for(Int_t i = 0; i<Particle_size; i++){
-	        if(Particle_PID[i] == 24){
-                wp = i;
-            }
-            if(Particle_PID[i] == -24){
-				wm = i;
-            }
-        }
-	//makes Four-vectors out of the selected W pair for each event.
-	TLorentzVector w_p(Particle_Px[wp], Particle_Py[wp], Particle_Pz[wp], Particle_E[wp]);
-	TLorentzVector w_m(Particle_Px[wm], Particle_Py[wm], Particle_Pz[wm], Particle_E[wm]);
-	WW = w_p + w_m;
-	//fills the histogram with the pair mass
-	wwMass->Fill(WW.M());
+  // Loops over each event and stores the particle ID for the last W+
+  // and last W- in the event.
+  for(Int_t i = 0; i<Particle_size; i++) {
 
-	return kTRUE;
+    if(Particle_PID[i] == 24) {
+      wp = i;
+    }
+
+    if(Particle_PID[i] == -24){
+      wm = i;
+    }
+  }
+  // Build 4-vectors out of the selected W pair for each event.
+  TLorentzVector w_p(Particle_Px[wp], Particle_Py[wp], Particle_Pz[wp], Particle_E[wp]);
+  TLorentzVector w_m(Particle_Px[wm], Particle_Py[wm], Particle_Pz[wm], Particle_E[wm]);
+  WW = w_p + w_m;
+
+  // Fills the histogram with the pair mass.
+  wwMass->Fill(WW.M());
+
+  return kTRUE;
 }
 
-void LHEF::SlaveTerminate()
-{
-	wwMass->Draw();
+void LHEF::SlaveTerminate() {
+  wwMass->Draw();
 }
 
-void LHEF::Terminate(){}
+void LHEF::Terminate() {}

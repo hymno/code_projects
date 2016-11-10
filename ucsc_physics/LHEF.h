@@ -27,7 +27,7 @@ public :
    TTree          *fChain;   //!pointer to the analyzed TTree or TChain
 
    // Declaration of leaf types
-   TH1F		   wwMass;
+   TH1F            wwMass;
    Int_t           Event_;
    UInt_t          Event_fUniqueID[kMaxEvent];   //[Event_]
    UInt_t          Event_fBits[kMaxEvent];   //[Event_]
