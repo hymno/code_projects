@@ -197,6 +197,9 @@ do
   CIPHER+=$CRYPT
 done
 
+CIPHER+=" "
+CIPHER+='#free'
+
 # Post the cipher to your twitter feed.
 echo "Are you sure you want to tweet $CIPHER (y/n)?"
 read response
