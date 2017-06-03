@@ -111219,6 +111219,7 @@ foppishness
 foppy
 fops
 fopship
+for
 fora
 foraba
 foraged
@@ -115185,6 +115186,7 @@ fumosity
 fumous
 fumously
 fumy
+fun
 funa
 funafuti
 funai
@@ -143404,6 +143406,7 @@ ieteeess
 ietf
 iever
 iezzi
+if
 ifact
 ifad
 ifaluk
@@ -149960,6 +149963,7 @@ inurns
 inuse
 inusitate
 inusitation
+inustice
 inustion
 inutile
 inutilely
@@ -151923,6 +151927,7 @@ isuwu
 isuxa
 isuzu
 iswara
+it
 itabirite
 itabuna
 itac
@@ -217721,6 +217726,7 @@ organistship
 organity
 organizable
 organization
+organizations
 organizaton
 organizatory
 organizazii
@@ -265786,6 +265792,7 @@ salzfelle
 salzillo
 salzman
 salzmann
+Sam
 sama
 samabajaw
 samac
@@ -338952,6 +338959,7 @@ waxwing
 waxworker
 waxworking
 waxworks
+way
 waya
 wayaka
 wayamli
