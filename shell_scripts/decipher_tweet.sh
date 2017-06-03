@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # This is a decipher script for cipher_tweet.sh
+# *** STILL IN PROGRESS ***
 
 # Declare the twitter handle of the cipher.
 MESSENGER="_wraith0"
@@ -16,6 +17,7 @@ cd $DECIPHER_REPO
 if [ ! command -v brew >/dev/null 2>&1 ] ; then
   echo 'Hey Mon, we just need to install the program Homebrew...'
   echo 'which will help us install Git :) I swear it'\`'s harmless.'
+  echo 'installing homebrew ...'
   # Install homebrew.
   /usr/bin/ruby -e \
     "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -24,6 +26,7 @@ fi
 # Check for and install git.
 if [ ! command -v git >/dev/null 2>&1 ] ; then
   echo 'Okay, now installing git which will help us sync dictionaries :D'
+  echo 'installing git ... '
   # Install git.
   brew install git
 fi
@@ -31,6 +34,7 @@ fi
 # Check for and install t, then set up the twitter API.
 if [ ! command -v t >/dev/null 2>&1 ] ; then
   echo 'Okay, just need to install t which is the commandline version of twitter :D'
+  echo 'installing t ...'
   gem install t
 fi
 
