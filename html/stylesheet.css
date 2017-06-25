@@ -1,0 +1,13 @@
+html {
+  direction: ltr;
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-size: 100%;
+  background: gray
+}
+
+button {
+  font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
