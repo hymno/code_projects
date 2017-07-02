@@ -3,11 +3,16 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-family: "Times New Roman", Georgia, Serif;
   font-size: 100%;
-  background: gray
+  background-color: #222426;
+  color: #d2e3f2;
 }
 
-button {
-  font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+a:link {
+  color: #cc687f
+}
+
+a:visited {
+  color: #a03951
 }
