@@ -16,3 +16,7 @@ a:link {
 a:visited {
   color: #a03951
 }
+
+ul {
+  list-style-type: none;
+}
