@@ -10,13 +10,17 @@ body {
 }
 
 a:link {
-  color: #cc687f
+  color: #cc687f;
 }
 
 a:visited {
-  color: #a03951
+  color: #a03951;
 }
 
 ul {
   list-style-type: none;
+}
+
+li {
+  margin: 10px;
 }
