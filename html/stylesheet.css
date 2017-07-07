@@ -24,3 +24,7 @@ ul {
 li {
   margin: 10px;
 }
+
+table {
+  max-width: 1000px;
+}
